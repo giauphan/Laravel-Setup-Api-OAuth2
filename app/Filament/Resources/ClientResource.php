@@ -26,7 +26,7 @@ class ClientResource extends Resource
         return $form
             ->schema([
                 Select::make('user_id')
-                    ->options(User::all()->pluck('email', 'id'))
+                    ->options(User::query()->pluck('email', 'id'))
                     ->preload(),
                 Forms\Components\TextInput::make('name')
                     ->required()
