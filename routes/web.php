@@ -18,8 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/login', function () {
-    return ['token'=>"token ExpireIn"];
+    return ['token' => 'token ExpireIn'];
 })->name('login');
-
-
-
